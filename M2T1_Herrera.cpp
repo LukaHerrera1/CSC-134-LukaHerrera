@@ -11,17 +11,32 @@ int main()
 {
     string name = "Luka";
     int num_apples = 10;
-    double price_each = 0.25;
+    double cost_each = 0.25;
+
+    string user_name; 
+    int apples_to_buy;
+
+    cout << "Hello! Whats your name? ";
+    cin >> user_name;
+    cout << "Thanks for coming by, " << user_name << "!" << endl;
 
     cout << "Welcome to the " << name << "'s apple farm!" << endl;
-    cout << "We have " << num_apples << " in stock" << endl; 
-    cout << "Each apple costs $" << price_each << endl;
+    cout << "There are " << num_apples << " in stock" << endl; 
+    cout << "They cost $" << cost_each << endl;
 
-    double total_price = num_apples * price_each;
+    cout << setprecision(2) << fixed;
+
+    double total_price = num_apples * cost_each;
      
-    cout << "The total price for all " << num_apples;
-    cout << " is: $" << total_price << endl; 
-    cout << "Thanks for coming by!" << endl;
+    cout << "The price for all of them is " << total_price << endl;
+    
+    cout << "How many apples would you like? ";
+    cin >> apples_to_buy;
 
+    total_price = apples_to_buy * cost_each;
+
+    cout << "Thank you! " << apples_to_buy << " apples comes to $" << total_price << endl;
+    cout << "Have a nice day!" << endl;
+    cout << endl; 
     return 0;
 }
