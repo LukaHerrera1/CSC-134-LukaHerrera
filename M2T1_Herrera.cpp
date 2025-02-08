@@ -15,7 +15,7 @@ int main()
 
     // Greeting message
     cout << "Welcome to the " << name << "'s apple farm!" << endl;
-    cout << "We have " << num_apples << " in stock" << endl; 
+    cout << "We have " << num_apples << " apples in stock" << endl; 
     cout << "Each apple costs $" << cost_each << endl;
 
     cout << setprecision(2) << fixed;
