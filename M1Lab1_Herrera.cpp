@@ -3,7 +3,6 @@
 // Luka Herrera
 // 2/12/2025
 
-
 #include <iostream>
 #include <iomanip>
 using namespace std;
@@ -27,7 +26,7 @@ int main() {
     cout << "Height: ";
     cin >> height;
 
-    // Math used to find the volume and cost of the crate
+    // Math used to find the volume, cost and price charged of the crate
     volume = width * length * height;
     cost = volume * cost_per_cubic_foot;
     charge = volume * charge_per_cubic_foot;
