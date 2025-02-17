@@ -9,13 +9,18 @@ using namespace std;
 
 int main () {
 
-    string username;
+    string first_name, last_name;
     double account_balance, amount_of_deposit, amount_of_withdraw;
+    int bank_number;
    
     cout << "Hello welcome to Square Bank." << endl;
-    cout << "Please enter your name to start your transaction." << endl;
-    cout << "Name: ";
-    cin >> username;
+    cout << "Please enter your first and last name to start your transaction." << endl;
+    cout << "First name: ";
+    cin >> first_name;
+    cout << "Last name: ";
+    cin >> last_name;
+    cout << "Enter bank number: ";
+    cin >> bank_number;
 
     cout << "Please enter your account balance: ";
     cin >> account_balance;
@@ -27,8 +32,12 @@ int main () {
     cin >> amount_of_withdraw;
 
     double final_balance = (account_balance + amount_of_deposit) - amount_of_withdraw;
- 
-    cout << "Your final balance is: $" << final_balance << endl;
+
+    cout << endl; 
+    cout << setprecision(2) << fixed << showpoint;
+    cout << "The account for " << first_name << " " << last_name << endl;
+    cout << "Account number: " << bank_number << endl;
+    cout << "This account has a balance of: $" << final_balance << endl;
 
     return 0;
 }
