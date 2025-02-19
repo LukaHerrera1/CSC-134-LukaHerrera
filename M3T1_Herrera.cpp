@@ -23,7 +23,7 @@ int main() {
     area_two = width_two * length_two;
 
     cout << "Rectangle one has an area of " << area_one << "." << endl;
-    cout << "Rectangle one has an area of " << area_two << "." << endl;
+    cout << "Rectangle two has an area of " << area_two << "." << endl;
 
     return 0;
 }
