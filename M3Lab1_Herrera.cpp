@@ -32,7 +32,7 @@ int main () {
     cout << "You have started on the beach of the island.";
     cout << " In front of you is a cave that has a waterfall for an entrance and";
     cout << " has light flicking off in the depths" << endl;
-    cout << " You also see a small house at the top of the mountain with light also shining out the windows." << endl;
+    cout << "You also see a small house at the top of the mountain with light also shining out the windows." << endl;
     cout << "Where do you want to explore first: type 1 for cave or type 2 for house." << endl;
     cin >> choice;
 
@@ -50,9 +50,9 @@ return 0;
 }
 
 void gotocave() {
-
     cout << "You have entered the cave walking across a narrow steep path, frightened and nervous ";
     cout<< "by the bats you slipped and fell down into the abyss." << endl;
+    cout << endl;
     cout << "Game Over" << endl;
 }
 
@@ -71,5 +71,20 @@ void gotohouse() {
     else {
         cout << "Not a valid choice. Please try again." << endl;
     }
+}
 
+void checkglobe() {
+    cout << "You look at the globe and see a small lever to open it up." << endl;
+    cout << "When you peak to look in the globe a massive spider leaps out unto your face." << endl;
+    cout << "You go running out of the house screaming. You trip and fall off the side of the mountain." << endl;
+    cout << endl;
+    cout << "Game Over" << endl;
+}
+void checkbookshelf() {
+    cout << "You inspect the bookshelf to find a hidden lever behind a book." << endl;
+    cout << "You pull the lever for the bookshelf to swing open." << endl;
+    cout << "A golden glow poured out for you to find the hidden treasure." << endl;
+    cout << "You ran back to your boat filled to the brim with gold." << endl;
+    cout << endl;
+    cout << "Congrats you have won the game!" << endl;
 }
