@@ -8,6 +8,8 @@ using namespace std;
 
 void gotocave();
 void gotohouse();
+void checkglobe();
+void checkbookshelf();
 
 int main () {
 
@@ -45,4 +47,29 @@ int main () {
     }
 
 return 0;
+}
+
+void gotocave() {
+
+    cout << "You have entered the cave walking across a narrow steep path, frightened and nervous ";
+    cout<< "by the bats you slipped and fell down into the abyss." << endl;
+    cout << "Game Over" << endl;
+}
+
+void gotohouse() {
+    int choice2;
+    cout << "You have climbed up the steep mountain and finally reached the house." << endl;
+    cout << "You have entered the house to find a dusty globe and a bookshelf." << endl;
+    cout << "What should you inspect next: 1 for the globe and 2 for the bookshelf." << endl;
+    cin >> choice2;
+    if (1==choice2){
+        checkglobe();
+    }
+    else if (2==choice2) {
+        checkbookshelf();
+    }
+    else {
+        cout << "Not a valid choice. Please try again." << endl;
+    }
+
 }
