@@ -33,17 +33,17 @@ int main () {
         double final_price = after_tip_price + tax_price + intial_price;
         cout << "You order has been placed for here." << endl;
         cout << "Price of meal: $" << intial_price << endl;
-        cout << "Tax amount: $" << tax_price << "." << endl;
-        cout << "Tip amount: $" << after_tip_price << "." << endl;
-        cout << "Final price: $" << final_price << "." << endl;
+        cout << "Tax amount: $" << tax_price << endl;
+        cout << "Tip amount: $" << after_tip_price << endl;
+        cout << "Final price: $" << final_price << endl;
 
     }
     else if (location == 2) {
         double final_price = intial_price + tax_price;
         cout << "You order has been placed for takeout." << endl;
         cout << "Price of meal: $" << intial_price << endl;
-        cout << "Tax amount: $" << tax_price << "." << endl;
-        cout << "Final price: $" << final_price << "." << endl;
+        cout << "Tax amount: $" << tax_price << endl;
+        cout << "Final price: $" << final_price << endl;
     }
     else {
         cout << "Please try again. Enter 1 or 2." << endl;
