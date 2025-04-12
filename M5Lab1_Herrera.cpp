@@ -12,7 +12,10 @@ void choice_back_door();
 void choice_go_home();
 void sneak_to_back();
 void you_got_hurt();
-void you_get_to_back_door();
+void opens_back_door();
+void investigate_sound();
+void choice_right_door();
+void choice_left_door();
 
 int main() {
     cout << "M5LAB1 - Choose Your Own Adventure" << endl;
@@ -58,8 +61,8 @@ int main() {
     cout << "Try the front door." << endl;
     cout << "It's locked. " << endl;
     cout << "Do you:" << endl;
-    cout << "1. Check around back" << endl;
-    cout << "2. Give up and go home" << endl;
+    cout << "1. Check around back." << endl;
+    cout << "2. Give up and go home." << endl;
     int choice;
     cout << "Choose: ";
     cin >> choice;
@@ -67,29 +70,93 @@ int main() {
       choice_back_door();
     } else if (2 == choice) {
       choice_go_home();
+    } else {
+      cout << "That's not a valid choice, please try again." << endl;
+      cin.ignore(); // clear the user input
+      choice_front_door();  // try again
     }
   }
   
-  void choice_back_door() { cout << "You opened the back door." << endl; }
+  void choice_back_door() { cout << "You start turn the corner to see a fence." << endl; 
+   sneak_to_back(); }
   
-  void choice_go_home() { cout << "You went home." << endl; }
+  void choice_go_home() { cout << "You went home after seeing there is no reasonable choice." << endl; }
   
-  void sneak_to_back(){
-    cout << "While getting over the fence you see a big dog barking." << endl;
+  void sneak_to_back() {
+    cout << "While getting over the fence you see a big dog guarding the back." << endl;
     cout << "Do you:" << endl;
-    cout << "1. Run as fast as yuo can to get around the dog." << endl;
-    cout << "2. Trick the dog with some food." << endl;
+    cout << "1. Run as fast as you can to get around the dog." << endl;
+    cout << "2. Trick the dog with the granola bar in your backpack." << endl;
     int choice;
     cout << "Choose: ";
     cin >> choice;
     if (1 == choice) {
         you_got_hurt();
     } else if (2 == choice) {
-        you_get_to_back_door();
+      opens_back_door();
+    } else {
+      cout << "That's not a valid choice, please try again." << endl;
+      cin.ignore(); // clear the user input
+      sneak_to_back();  // try again
     }
   }
 
-  void you_got_hurt() { cout << "You weren't faster than the dog and he bit you. You had to go home." << endl; }
+  void you_got_hurt() { cout << "You weren't faster than the dog and he bit you. You had to go back home." << endl; }
 
-  void you_get_to_back_door() { cout << "You get to the back door, as dog is occupied while eating." << endl; }
+  void opens_back_door() { 
+    cout << "You got to the back door, as dog is occupied sniffing the granola bar." << endl;
+    cout << "You find the door to be unlocked and walk into the kitchen area." << endl;
+    cout << " A sudden loud scratching noise comes from up stairs." << endl;
+    cout << "Do you:" << endl;
+    cout << "1. Investigate the sound." << endl;
+    cout << "2. Leave the haunted house." << endl;
+    int choice;
+    cout << "Choose:";
+    cin >> choice;
+    if (1 == choice) {
+      investigate_sound(); 
+    } else if (2 == choice) {
+      choice_go_home();
+    } else {
+      cout << "That's not a valid choice, please try again." << endl;
+      cin.ignore(); // clear the user input
+      opens_back_door();  // try again
+    }
+  }
 
+  void investigate_sound() {
+    cout << "You walk up the stairs to find a long narrow hallway." << endl;
+    cout << "There were two doors at the very end. One on the right and one on the left." << endl;
+    cout << "Do you:" << endl;
+    cout << "1. Choose the right door." << endl;
+    cout << "2. Choose the left door." << endl;
+    cout << "3. Give up and go home." << endl;
+    int choice;
+    cout << "Choose:";
+    cin >> choice;
+    if (1 == choice){
+      choice_right_door();
+    } else if (2 == choice) {
+      choice_left_door();
+    } else if (3 == choice) {
+      choice_go_home();
+    } else {
+      cout << "That's not a valid choice, please try again." << endl;
+      cin.ignore(); // clear the user input
+      investigate_sound();  // try again
+    }
+  }
+
+  void choice_right_door() {
+    cout << "You open the door to see nothing, but as you walked you trip over tripwire releasing a hugeaxe from the ceiling." << endl;
+    cout << "Lucky for you. It barely missed you." << endl;
+    cout << "You were frightened by this you decided to go home." << endl;
+  }
+
+  void choice_left_door() {
+    cout << "You walk into the room to find an old record playing." << endl;
+    cout << "The noise was ear piercing." << endl;
+    cout << "So you pull it off the record player." << endl;
+    cout << "You look over to hear a loud laughter coming from the bathroom." << endl;
+    cout << "You decide to leave with the record" << endl;
+  }
