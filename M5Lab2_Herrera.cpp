@@ -10,6 +10,10 @@ using namespace std;
 // the getLength,
 // getWidth, getArea, and displayData
 // functions here.
+double getLength();
+double getWidth();
+double getArea(double length, double width);
+void displayData(double length, double width, double area);
 
 int main()
 {
@@ -19,15 +23,15 @@ int main()
    double length,    // The rectangle's length
           width,     // The rectangle's width
           area;      // The rectangle's area
-          
+
    // Get the rectangle's length.
    length = getLength();
    
    // Get the rectangle's width.
-   width = getWidth()
+   width = getWidth();
    
    // Get the rectangle's area.
-   are = getArea();
+   area = getArea(length, width);
    
    // Display the rectangle's data.
    displayData(length, width, area);
@@ -35,7 +39,27 @@ int main()
    return 0;
 }
 
-//***************************************************
-// TODO: write the getLength, getWidth, getArea,    *
-// and displayData functions below.                 *
-//***************************************************
+double getLength() {
+   double length;
+   cout << "Enter length: ";
+   cin >> length;
+   return length;
+}
+
+double getWidth() {
+   double width;
+   cout << "Enter width: ";
+   cin >> width;
+   return width;
+}
+
+double getArea(double length, double width) {
+   return length * width;
+}
+
+void displayData(double length, double width, double area) {
+   cout << "Rectangle Dimensions: " << endl;
+   cout << "Length: " << length << endl;
+   cout << "Width: " << width << endl;
+   cout << "Area: " << area << endl;
+}
