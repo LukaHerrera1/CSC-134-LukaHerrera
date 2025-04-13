@@ -77,7 +77,7 @@ int main() {
     }
   }
   
-  void choice_back_door() { cout << "You start turn the corner to see a fence." << endl; 
+  void choice_back_door() { cout << "You start to turn the corner of the house and see a fence." << endl; 
    sneak_to_back(); }
   
   void choice_go_home() { cout << "You went home after seeing there is no reasonable choice." << endl; }
@@ -106,7 +106,7 @@ int main() {
   void opens_back_door() { 
     cout << "You got to the back door, as dog is occupied sniffing the granola bar." << endl;
     cout << "You find the door to be unlocked and walk into the kitchen area." << endl;
-    cout << " A sudden loud scratching noise comes from up stairs." << endl;
+    cout << "A sudden loud scratching noise comes from up stairs." << endl;
     cout << "Do you:" << endl;
     cout << "1. Investigate the sound." << endl;
     cout << "2. Leave the haunted house." << endl;
@@ -126,7 +126,7 @@ int main() {
 
   void investigate_sound() {
     cout << "You walk up the stairs to find a long narrow hallway." << endl;
-    cout << "There were two doors at the very end. One on the right and one on the left." << endl;
+    cout << "There are two doors at the very end. One on the right and one on the left." << endl;
     cout << "Do you:" << endl;
     cout << "1. Choose the right door." << endl;
     cout << "2. Choose the left door." << endl;
@@ -148,15 +148,13 @@ int main() {
   }
 
   void choice_right_door() {
-    cout << "You open the door to see nothing, but as you walked you trip over tripwire releasing a hugeaxe from the ceiling." << endl;
-    cout << "Lucky for you. It barely missed you." << endl;
-    cout << "You were frightened by this you decided to go home." << endl;
+    cout << "You open the door to see nothing, but as you walked you triggered tripwire. Releasing a huge axe from the ceiling." << endl;
+    cout << "Lucky for you it barely missed." << endl;
+    cout << "You were frightened by this and you decided to go home." << endl;
   }
 
   void choice_left_door() {
     cout << "You walk into the room to find an old record playing." << endl;
-    cout << "The noise was ear piercing." << endl;
-    cout << "So you pull it off the record player." << endl;
-    cout << "You look over to hear a loud laughter coming from the bathroom." << endl;
-    cout << "You decide to leave with the record" << endl;
+    cout << "So you pull the record off to only hear a loud laughter coming from the bathroom." << endl;
+    cout << "You decide to leave with the record as a sourvine." << endl;
   }
