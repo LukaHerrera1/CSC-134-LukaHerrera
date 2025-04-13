@@ -86,7 +86,7 @@ int main() {
     cout << "While getting over the fence you see a big dog guarding the back." << endl;
     cout << "Do you:" << endl;
     cout << "1. Run as fast as you can to get around the dog." << endl;
-    cout << "2. Trick the dog with the granola bar in your backpack." << endl;
+    cout << "2. Trick the dog with the granola bar from your backpack." << endl;
     int choice;
     cout << "Choose: ";
     cin >> choice;
@@ -156,5 +156,5 @@ int main() {
   void choice_left_door() {
     cout << "You walk into the room to find an old record playing." << endl;
     cout << "So you pull the record off to only hear a loud laughter coming from the bathroom." << endl;
-    cout << "You decide to leave with the record as a sourvine." << endl;
+    cout << "You decide to leave with the record as a sourvine to tell the tale." << endl;
   }
