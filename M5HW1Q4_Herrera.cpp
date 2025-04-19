@@ -24,27 +24,39 @@ int main() {
         double radius;
         cout << "What is the radius of the circle: ";
         cin >> radius;
-        double area_circle = (radius * radius) * 3.14159;
-        cout << fixed << setprecision(2);
-        cout << "The area of the circle is: " << area_circle << endl;
+        if (radius < 1) {
+            cout << "Error! No negative numbers." << endl;
+        } else {
+            double area_circle = (radius * radius) * 3.14159;
+            cout << fixed << setprecision(2);
+            cout << "The area of the circle is: " << area_circle << endl;
+        }
     } else if (choice == 2) {
         double length, width;
         cout << "What is the length of the rectangle: ";
         cin >> length;
         cout << "What is the width of the rectangle: ";
         cin >> width;
-        cout << fixed << setprecision(2);
-        double area = length * width;
-        cout << "The area of the rectangle is: " << area << endl;
+        if (length < 1 || width < 1) {
+            cout << "Error! No negative numbers." << endl;
+        } else {
+            cout << fixed << setprecision(2);
+            double area = length * width;
+            cout << "The area of the rectangle is: " << area << endl;
+        }
     } else if (choice == 3) { 
         double base_length, height;
         cout << "What is the length of the triangles base: ";
         cin >> base_length;
         cout << "What is the height of the triangle: ";
         cin >> height;
-        cout << fixed << setprecision(2);
-        double area = base_length * height * 0.5;
-        cout << "The area of the triangle is: " << area << endl;
+        if (base_length < 1 || height < 1){
+            cout << "Error! No negative numbers." << endl;  
+        } else {
+            cout << fixed << setprecision(2);
+            double area = base_length * height * 0.5;
+            cout << "The area of the triangle is: " << area << endl;
+        }   
     } else if (choice == 4) {
         cout << "Quitting. Thank you for using the Geometry Caculator." << endl;
     }
