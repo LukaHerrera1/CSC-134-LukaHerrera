@@ -9,11 +9,13 @@ using namespace std;
 
 int main() {
     int choice;
-    cout << "1. Rainfall average caculator." << endl;
-    cout << "2. Volume of a block caculator." << endl;
-    cout << "3. Roman Numeral caculator." << endl;
-    cout << "4. Geometry caculator." << endl;
-    cout << "5. Hour per distance caculator." << endl;
+do {
+    cout << endl;
+    cout << "1. Rainfall Average Caculator." << endl;
+    cout << "2. Volume of a Block Caculator." << endl;
+    cout << "3. Roman Numeral Caculator." << endl;
+    cout << "4. Geometry Caculator." << endl;
+    cout << "5. Hour per Distance Caculator." << endl;
     cout << "6. Quit and close operation." << endl;
     cin >> choice;
 
@@ -25,6 +27,9 @@ int main() {
     if (choice == 1) {
         string first_month, second_month, third_month;
         double first_month_rainfall, second_month_rainfall, third_month_rainfall;
+        cout << endl;
+        cout << "Rainfall Average Caculator" << endl;
+        cout << endl;
 
         cout << "Enter month: ";
         cin >> first_month;
@@ -47,7 +52,10 @@ int main() {
 
     } else if (choice == 2) {
         double width, length, height;
-
+        cout << endl;
+        cout << "Volume of a Block Calculator" << endl;
+        cout << endl;
+    
         cout << "Enter width: ";
         cin >> width;
         cout << "Enter length: ";
@@ -61,8 +69,13 @@ int main() {
         double block_volume = width * length * height;
         cout << "The volume of the block is: " << block_volume << endl;
         }
-    } else if (choice == 3) {
+
+} else if (choice == 3) {
         int number;
+        cout << endl;
+        cout << "Roman Numeral Caculator" << endl;
+        cout << endl;
+     
         cout << "Enter a number (1 - 10): ";
         cin >> number;
 
@@ -89,9 +102,13 @@ int main() {
         } else if (number == 10) {
         cout << "The Roman numeral version of 10 is X." << endl;
         } 
+    
     } else if (choice == 4) {
             int choice;
+            cout << endl;
             cout << "Geometry Caculator" << endl;
+            cout << endl;
+          
             cout << "1. Caculate the Area of a Circle" << endl;
             cout << "2. Caculate the Area of a Rectangle" << endl;
             cout << "3. Caculate the Area of a Triangle" << endl;
@@ -141,8 +158,13 @@ int main() {
             } else if (choice == 4) {
                 cout << "Quitting. Thank you for using the Geometry Caculator." << endl;
             }
+        
         } else if (choice == 5) {
         int speed, time;
+        cout << endl;
+        cout << "Hour per Distance Caculator" << endl;
+        cout << endl;
+        
         cout << "What is the speed of the vehicle in Mph: ";
         cin >> speed;
         while (speed < 0) {
@@ -163,8 +185,11 @@ int main() {
             int distance = speed * hour;
             cout << setw(5) << hour << setw(15) << distance << endl;
         }
+    
     } else if (choice == 6) {
         cout << "Thank you for using the operation! Quitting out." << endl;
     }
-    return 0;
+   
+} while (choice !=6);
+return 0;
 }
