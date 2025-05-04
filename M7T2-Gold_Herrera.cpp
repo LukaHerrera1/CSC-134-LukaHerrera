@@ -64,7 +64,7 @@ int main() {
     cin >> boxHeight;
 
     while (boxWidth <= 0 || boxLength <= 0 || boxHeight <= 0) {
-        cout << "Error no value can be zero or negative." << endl;
+        cout << "Error! No value can be zero or negative." << endl;
         cout << "Re-enter values." << endl;
         cout << "Width: ";
         cin >> boxWidth;

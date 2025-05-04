@@ -50,7 +50,7 @@ int main() {
     cin >> rectLength;
 
     while (rectWidth <= 0 || rectLength <= 0) {
-        cout << "Error no value can be zero or negative." << endl;
+        cout << "Error! No value can be zero or negative." << endl;
         cout << "Re-enter values." << endl;
         cout << "Width: ";
         cin >> rectWidth;
