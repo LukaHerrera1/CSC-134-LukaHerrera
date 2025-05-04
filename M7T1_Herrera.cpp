@@ -41,7 +41,7 @@ int main() {
 
     Restaurant lunch_place = Restaurant("Cheddar's Scratch Kitchen", 3.9);
 
-    Restaurant dinner_place = Restaurant("Olive Garden, 4.4");
+    Restaurant dinner_place = Restaurant("Olive Garden", 4.4);
 
     Restaurant breakfast_place = Restaurant("Cracker Barrel", 3.5);
     cout << "Review info" << endl;
@@ -53,6 +53,6 @@ int main() {
 
     cout << "Dinner: " << endl;
     dinner_place.printInfo();
-    
+
     return 0;
 }
