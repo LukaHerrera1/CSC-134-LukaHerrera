@@ -37,17 +37,22 @@ class Restaurant {
 };
 
 int main() {
-    cout << "M7T1 - Restuarant Reviews" << endl;
+    cout << "M7T1 - Restaurant Reviews" << endl;
 
-    Restaurant lunch_place = Restaurant("Mi Casita", 4.5);
+    Restaurant lunch_place = Restaurant("Cheddar's Scratch Kitchen", 3.9);
 
-    Restaurant breakfast_place = Restaurant("Waffle House", 3.0);
+    Restaurant dinner_place = Restaurant("Olive Garden, 4.4");
+
+    Restaurant breakfast_place = Restaurant("Cracker Barrel", 3.5);
     cout << "Review info" << endl;
     cout << "Breakfast: " << endl;
     breakfast_place.printInfo();
 
     cout << "Lunch: " << endl;
     lunch_place.printInfo();
+
+    cout << "Dinner: " << endl;
+    dinner_place.printInfo();
     
     return 0;
 }
